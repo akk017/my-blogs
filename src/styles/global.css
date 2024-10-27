@@ -23,6 +23,7 @@ body {
 	padding-left: 300px;
 	padding-right: 300px;
 	padding-top: 100px;
+	padding-bottom: 100px;
 }
 main {
 	width: 720px;
@@ -80,6 +81,11 @@ button:hover {
 button:active {
 	border-bottom: 2px solid black;
 	cursor: pointer;
+}
+
+a {
+	color: #232323;
+	text-decoration: none;
 }
 
 a:hover {

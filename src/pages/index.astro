@@ -3,6 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Nav from '../components/Nav.astro';
 import Main from '../components/Main.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection, getEntry } from 'astro:content';
+
+const post = await getCollection('blog');
 ---
 
 
@@ -35,6 +38,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             div.post .desc {
                 font-size: 0.9rem;
             }
+
+            div.post-list {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
         </style>
 	</head>
 
@@ -43,12 +52,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         <Main />
 
         <h4>Recent Posts</h4>
-        <div class="post">
-            <div class="image">WD / 01</div>
-            <div class="content">
-                <span>Blog Post Title</span>
-                <span class="desc">One Line Description</span>
+
+        <div class="post-list">
+        {post.map((post, idx) => {
+            return (
+            <div class="post">
+                <div class="image">WD / {idx}</div>
+                <div class="content">
+                    <a href={`/post/${post.slug}`}>{post.data.title}</a>
+                    <span class="desc">{post.data.onlineDesc}</span>
+                </div>
             </div>
+        )
+        })}
         </div>
 
 
