@@ -17,13 +17,13 @@ body {
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	font-size: 16px;
+	font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
 	line-height: 1.7;
 	letter-spacing: 0.1px;
-	padding-left: 300px;
-	padding-right: 300px;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
 main {
 	width: 720px;
@@ -39,22 +39,27 @@ h5,
 h6 {
 	margin: 2rem 0 2rem 0;
 	color: rgb(var(--black));
-	line-height: 1.2;
+	line-height: 1.6rem;
 }
 h1 {
-	font-size: 3.052em;
+	/* font-size: 1.650rem */
+	font-size: clamp(1.650rem, 0.95rem + 0.25vw, 1.25rem);
 }
 h2 {
-	font-size: 2.441em;
+	font-size: clamp(1.450rem, 0.95rem + 0.25vw, 1.25rem);
 }
 h3 {
-	font-size: 1.953em;
+	font-size: clamp(1.350rem, 0.95rem + 0.25vw, 1.25rem);
 }
 h4 {
-	font-size: 1.563em;
+	font-size: clamp(1.215rem, 0.95rem + 0.25vw, 1.25rem);
 }
 h5 {
-	font-size: 1.25em;
+	font-size: clamp(1.138rem, 0.95rem + 0.25vw, 1.25rem);
+}
+h6 {
+	font-size: 1.067rem;
+	font-size: clamp(1.067rem, 0.95rem + 0.25vw, 1.25rem);
 }
 strong,
 b {
