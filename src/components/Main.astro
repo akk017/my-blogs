@@ -1,0 +1,40 @@
+---
+import Folder from "./Icons/folder.astro"
+---
+
+<div class="sec">
+    <h4>Welcome to My Digital Garden</h4>
+
+    <p>
+        This is a digital garden of my personal website, blog, and portfolio. It is a place where I can
+        document my learnings, experiences, and projects. I hope you enjoy exploring my digital garden and
+        find it useful.
+    </p>
+</div>
+
+
+<div class="sec">
+    <h4>My Learnings</h4>
+
+    <div class="learnings">
+        <button><Folder /> Web Development</button>
+        <button><Folder /> Programming</button>
+        <button><Folder /> System Design</button>
+        <button><Folder /> UI / UX</button>
+    </div>
+</div>
+
+
+<style>
+
+
+    div.learnings{
+        display: flex;
+        gap: 10px;
+    }
+
+    div.sec {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+</style>

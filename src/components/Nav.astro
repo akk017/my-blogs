@@ -1,0 +1,52 @@
+---
+import Home from "./Icons/home.astro";
+import Info from "./Icons/info.astro";
+---
+
+<div class="nav">
+
+    <h5>Akash Kandasamy</h5>
+
+    <div class="nav-links">
+        <a class="link">Home</a>
+        <a class="link">Projects</a>
+        <a class="link">About Me</a>
+    </div>
+
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" height="5px" width="100%" >
+    <defs>
+        <pattern id="pattern_myCjO" patternUnits="userSpaceOnUse" width="4.5" height="4.5" patternTransform="rotate(45)">
+            <line x1="0" y="0" x2="0" y2="4.5" stroke="#194d33" stroke-width="1" />
+        </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#pattern_myCjO)" :opacity="1" />
+</svg>
+
+
+
+<style>
+    h5 {
+        margin: 0;
+    }
+
+    div.nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        box-shadow: 0 2px 8px rgba(var(--black), 5%);
+    }
+    div.nav-links{
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    p {
+        margin-top: 10px;
+    }
+</style>
